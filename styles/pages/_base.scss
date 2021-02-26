@@ -1,0 +1,743 @@
+@import "../core/variables";
+
+.section_inner {
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 0;
+  @include tb {
+    width: 85%;
+  }
+}
+
+.sp_br {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+
+.pc {
+  @include tb {
+    display: none;
+  }
+}
+
+.tb {
+  display: none;
+  @include tb {
+    display: block;
+  }
+}
+
+.sp {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+
+.main_cc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 30px;
+  background-color: $colorGreen;
+  height: 5.4vh;
+  @extend .font-w3;
+  h2 {
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    @include sp {
+      font-size: 14px;
+    }
+  }
+}
+
+.fixed_banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10.4vh;
+  background-color: $colorGreen;
+  z-index: 1000;
+  .banner_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .info {
+      margin-right: 10px;
+      font-size: 17px;
+      color: #ffffff;
+      letter-spacing: 1.02px;
+      @include sp {
+        font-size: 13px;
+      }
+      span {
+        @extend .font-w5;
+        font-size: 28px;
+        @include sp {
+          font-size: 22.5px;
+        }
+      }
+    }
+    .btn {
+      position: relative;
+      margin-left: 10px;
+      box-shadow: 3px 5px 5px 0 rgba(0, 0, 0, 0.16);
+      font-size: 20px;
+      letter-spacing: 1.2px;
+      transition: 0.2s;
+      @include sp {
+        font-size: 17px;
+      }
+      a {
+        @extend .font-w2;
+        display: block;
+        padding: 15px 70px 15px 40px;
+        color: #ffffff;
+        background-color: #b13b71;
+        border: 1px solid #b13b71;
+        &:hover {
+          color: #b13b71;
+          transition: 0.2s;
+          background-color: #ffffff;
+          border: 1px solid #b13b71;
+        }
+        &:hover:after {
+          background-image: url(../img/buy_btn_red.png);
+        }
+        @include sp {
+          padding: 15px 45px 15px 15px;
+        }
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          background-image: url(../img/buy_btn.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          top: 50%;
+          right: 10%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+main {
+  .sec_ttl {
+    @extend .font-w6;
+    padding: 18px 0;
+    font-size: 24px;
+    line-height: 1.71;
+    letter-spacing: 1.44px;
+    color: $colorGreen;
+    background-color: #ffffff;
+    text-align: center;
+    border: 1px solid $colorGreen;
+    @include sp {
+      padding: 13px 0;
+      font-size: 15px;
+    }
+  }
+  .mv {
+    @include sp {
+      margin-top: 25px;
+    }
+    background-color: #ffffff;
+    // height: 73.6vh;
+    h2 {
+      height: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .pc_mv {
+        @include tb {
+          display: none;
+        }
+      }
+      .sp_mv {
+        display: none;
+        @include tb {
+          display: block;
+        }
+      }
+    }
+  }
+  .feature {
+    position: relative;
+    margin-top: -5px;
+    padding: 120px 0 110px 0;
+    background-color: rgba(196, 231, 255, 0.52);
+    overflow: hidden;
+    @include tb {
+      margin-top: -5px;
+      padding: 30px 0 35px 0;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-image: url(../img/bubble1.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 165px;
+      height: 165px;
+      top: 0px;
+      right: 25%;
+      z-index: -1;
+      @include tb {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      background-image: url(../img/bubble2.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 570px;
+      height: 570px;
+      top: -4%;
+      left: 7%;
+      z-index: -1;
+      @include tb {
+        top: -20%;
+        left: -27%;
+      }
+      @include sp {
+        width: 350px;
+        height: 350px;
+        top: -22%;
+      }
+    }
+    .feature_inner {
+      position: relative;
+      margin: 0 auto;
+      width: 51%;
+      @include tb {
+        width: 85%;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: url(../img/bubble3.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 285px;
+        height: 285px;
+        bottom: -9%;
+        right: -10%;
+        z-index: -1;
+        @include tb {
+          right: -22%;
+        }
+        @include sp {
+          width: 180px;
+          height: 180px;
+          bottom: -12%;
+        }
+      }
+      .img_area {
+        width: 100%;
+        text-align: center;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .feature_annotation {
+        margin-top: 60px;
+        text-align: center;
+        font-size: 18px;
+        @include sp {
+          margin-top: 30px;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  .about {
+    position: relative;
+    padding: 120px 0;
+    @include tb {
+      padding: 50px 0;
+    }
+    @include sp {
+      padding: 50px 0 0 0;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-image: url(../img/bubble4.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 365px;
+      height: 365px;
+      top: 7%;
+      right: 17%;
+      z-index: -1;
+      @include tb {
+        right: 5%;
+      }
+      @include sp {
+        width: 250px;
+        height: 250px;
+        right: 0;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      background-image: url(../img/bubble5.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 135px;
+      height: 135px;
+      bottom: 16%;
+      left: 33%;
+      z-index: -1;
+      @include tb {
+        bottom: -2%;
+        left: 18%;
+      }
+      @include sp {
+        width: 100px;
+        height: 100px;
+        left: 7%;
+        bottom: 0;
+      }
+    }
+    .section_inner {
+      @include tb {
+        padding: 0;
+      }
+      h2 {
+        text-align: center;
+        @include tb {
+          margin: 0 auto;
+          width: 41%;
+        }
+        img {
+          @include tb {
+            width: 100%;
+          }
+        }
+      }
+      .about_lead {
+        @extend .font-w3;
+        margin-top: 55px;
+        font-size: 18px;
+        line-height: 2.2;
+        color: #1a1311;
+        text-align: center;
+        @include sp {
+          margin-top: 20px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .ingredients {
+    padding: 40px 0 120px 0;
+    @include tb {
+      padding: 40px 0 60px 0;
+    }
+    @include sp {
+      padding: 50px 0;
+    }
+    .section_inner {
+      width: 65%;
+      @include tb {
+        padding: 0;
+        width: 85%;
+      }
+      .sub_ttl {
+        @extend .font-w7;
+        margin-top: 40px;
+        font-size: 20px;
+        line-height: 1.7;
+        letter-spacing: 1.2px;
+        color: $colorGreen;
+        text-align: center;
+        @include sp {
+          margin-top: 15px;
+          font-size: 12px;
+        }
+        span {
+          position: relative;
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 140px;
+            height: 1px;
+            background-color: $colorGreen;
+            top: 50%;
+            left: -170px;
+            @include sp {
+              width: 40px;
+              left: -60px;
+            }
+          }
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 140px;
+            height: 1px;
+            background-color: $colorGreen;
+            top: 50%;
+            right: -170px;
+            @include sp {
+              width: 40px;
+              right: -60px;
+            }
+          }
+        }
+      }
+      .features {
+        margin-top: 45px;
+        @include sp {
+          margin-top: 20px;
+        }
+        .feature_item {
+          @extend .font-w4;
+          position: relative;
+          padding: 30px 50px;
+          font-size: 18px;
+          line-height: 2.2;
+          background-color: rgba(54, 168, 162, 0.1);
+          @include tb {
+            padding: 20px 30px;
+          }
+          @include sp {
+            padding: 15px 10px;
+            font-size: 12px;
+          }
+          h4 {
+            color: #000000;
+            span {
+              @extend .font-w2;
+            }
+          }
+        }
+        .feature_item:not(:first-child) {
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+  .comparison {
+    background-color: rgba(196, 231, 255, 0.52);
+    .section_inner {
+      padding: 80px 0;
+      @include tb {
+        padding: 60px 0;
+      }
+      @include sp {
+        padding: 50px 0;
+      }
+      .comparison_diagram_area {
+        margin-top: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include tb {
+          justify-content: center;
+        }
+        @include sp {
+          margin-top: 30px;
+        }
+        .diagram {
+          width: 31.5%;
+          @include tb {
+            width: 100%;
+            text-align: center;
+          }
+          @include sp {
+            display: flex;
+            justify-content: flex-end;
+          }
+          .diagram_pc {
+            max-width: 100%;
+            @include sp {
+              display: none;
+            }
+          }
+          .diagram_sp {
+            display: none;
+            @include sp {
+              display: block;
+            }
+          }
+        }
+        .others_area {
+          @include tb {
+            margin-top: 35px;
+          }
+        }
+      }
+      .description {
+        @extend .font-w4;
+        font-size: 18px;
+        line-height: 1.72;
+        color: #000000;
+        @include sp {
+          font-size: 12px;
+        }
+      }
+      .description:nth-of-type(1) {
+        margin-top: 60px;
+        @include sp {
+          margin-top: 40px;
+        }
+      }
+      .description:not(:nth-of-type(1)) {
+        margin-top: 20px;
+      }
+    }
+  }
+  .cell_activation {
+    .section_inner {
+      padding: 90px 0 120px 0;
+      @include tb {
+        padding: 60px 0;
+      }
+      @include sp {
+        padding: 50px 0;
+      }
+      h2 {
+        @extend .font-w6;
+        font-size: 32px;
+        color: $colorGreen;
+        text-align: center;
+        @include sp {
+          font-size: 25px;
+        }
+        span {
+          font-size: 28px;
+          @include sp {
+            font-size: 20px;
+          }
+        }
+      }
+      .underline {
+        margin-top: 45px;
+      }
+      .feature_items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        @include sp {
+          margin-top: 0;
+        }
+        .feature_item {
+          width: 28.8%;
+          @include tb {
+            width: 100%;
+          }
+          .item_num {
+            width: 100%;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .item_main_area {
+            @include tb {
+              margin-top: -70px;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: flex-end;
+            }
+            @include sp {
+              margin-top: -40px;
+            }
+            .item_img {
+              width: 100%;
+              text-align: center;
+              @include tb {
+                margin-right: 3%;
+                width: 35.5%;
+              }
+              img {
+                width: 83.4%;
+                height: auto;
+                @include tb {
+                  width: 100%;
+                }
+              }
+            }
+            .item_ttl_area {
+              margin-top: 30px;
+              @include tb {
+                width: 60%;
+              }
+              .feature_cc {
+                @extend .font-w6;
+                font-size: 16px;
+                letter-spacing: 0.96px;
+                color: $colorGreen;
+                @include sp {
+                  font-size: 14px;
+                }
+              }
+              .item_ttl {
+                @extend .font-w6;
+                margin-top: 13px;
+                font-size: 18px;
+                letter-spacing: 1.08px;
+                color: #000000;
+                @include sp {
+                  margin-top: 9px;
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+          .item_lead {
+            @extend .font-w2;
+            font-size: 15px;
+            margin-top: 25px;
+            line-height: 1.67;
+            color: #000000;
+            @include sp {
+              margin-top: 20px;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+      .ingredients_lead {
+        @extend .font-w6;
+        margin-top: 140px;
+        padding-top: 40px;
+        font-size: 19px;
+        text-align: center;
+        line-height: 1.47;
+        color: #000000;
+        border-top: 1px solid #bfbfbf;
+        @include tb {
+          margin-top: 50px;
+          padding-top: 20px;
+        }
+        @include sp {
+          font-size: 14px;
+        }
+      }
+      .underline {
+        width: 100%;
+        @include tb {
+          margin-top: 20px;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .ingredients_img {
+        margin: 30px auto 0 auto;
+        text-align: center;
+        width: 73%;
+        @include tb {
+          margin: 15px auto 0 auto;
+        }
+        @include tb {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+          @include tb {
+            width: 87%;
+          }
+        }
+        .ingredients_list {
+          display: flex;
+          justify-content: center;
+          .list_item {
+            @extend .font-w5;
+            font-size: 20px;
+            padding: 15px 5px;
+            text-align: center;
+            @include sp {
+              padding: 5px;
+              font-size: 12px;
+            }
+          }
+          .list_item:not(:nth-of-type(1)) {
+            margin-top: 10px;
+          }
+          .list_green {
+            margin-right: 5%;
+            width: 47%;
+            .list_item {
+              color: $colorGreen;
+              border: 1px solid $colorGreen;
+            }
+          }
+          .list_orange {
+            margin-left: 5%;
+            width: 47%;
+            .list_item {
+              color: #f38200;
+              border: 1px solid #f38200;
+            }
+          }
+        }
+      }
+      .cell_like_ttl {
+        @extend .font-w6;
+        margin: 60px auto 0 auto;
+        padding-bottom: 18px;
+        width: 74%;
+        font-size: 20px;
+        color: $colorGreen;
+        text-align: center;
+        border-bottom: 1px solid $colorGreen;
+        @include tb {
+          width: 100%;
+        }
+        @include sp {
+          margin: 20px auto 0 auto;
+          padding-bottom: 9px;
+          font-size: 14px;
+        }
+      }
+      .cell_like_lead {
+        @extend .font-w2;
+        margin-top: 25px;
+        font-size: 18px;
+        color: #000000;
+        line-height: 1.72;
+        letter-spacing: 0.2px;
+        text-align: center;
+        @include sp {
+          margin-top: 10px;
+          font-size: 12px;
+        }
+        span {
+          @extend .font-w6;
+          display: block;
+          font-size: 20px;
+          letter-spacing: 0.22px;
+          @include sp {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}

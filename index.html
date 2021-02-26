@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header_inner">
+            <div class="header_main">
+                <h1 class="h_logo">
+                    <a href="/"><img src="img/h_logo.svg" alt=""></a>
+                </h1>
+                <!-- <a id="humbgr">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>    
+                    </div>
+                </a> -->
+                <div id="gnav">
+                    <nav>
+                        <ul id="gnav_list">
+                            <li class="list">
+                                <a href="">
+                                    <img src="img/icon_facebook.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="">
+                                    <img src="img/icon_instagram.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="">
+                                    <img src="img/icon_twitter.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="">
+                                    <img src="img/icon_line.svg" alt="">
+                                </a>
+                            </li>
+                            <!-- <li class="list search_sier">
+                                <span class="category_name">SIerを探す</span>
+                                <ul class="sub_category">
+                                    <li><a href="/#search_from_industory">業界から探す</a></li>
+                                    <li><a href="/#search_from_lobot">種類から探す</a></li>
+                                    <li><a href="/#search_from_work">作業から探す</a></li>
+                                    <li><a href="/#search_from_process">導入工程から探す</a></li>
+                                </ul>
+                            </li>
+                            <li class="list"><a class="category" href="/for-company"><span class="category_name">導入をご検討の企業様へ</span></a></li>
+                            <li class="list"><a class="category" href="/for-sier"><span class="category_name">SIerの企業様へ</span></a></li>
+                            <li class="list"><a class="category" href="/interview"><span class="category_name">インタビュー</span></a></li>
+                            <li class="list"><a class="category" href="/column"><span class="category_name">コラム</span></a></li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="gnav_menu">
+            <nav>
+                <ul class="gnav_menu_list">
+                    <li class="menu_header">
+                        <span>SIerを探す</span>
+                        <ul class="menu_inner">
+                            <li>
+                                <a href="">金属製品</a>
+                            </li>
+                            <li>
+                                <a href="">輸送用機械器具</a>
+                            </li>
+                            <li>
+                                <a href="">プラスチック製品</a>
+                            </li>
+                            <li>
+                                <a href="">生産用機械器具</a>
+                            </li>
+                            <li>
+                                <a href="">業務用機械器具</a>
+                            </li>
+                            <li>
+                                <a href="">はん用機械器具</a>
+                            </li>
+                            <li>
+                                <a href="">非鉄金属</a>
+                            </li>
+                            <li>
+                                <a href="">住宅産業</a>
+                            </li>
+                            <li>
+                                <a href="">電子部品・デバイス</a>
+                            </li>
+                            <li>
+                                <a href="">情報通信機械器具</a>
+                            </li>
+                            <li>
+                                <a href="">電気機械器具</a>
+                            </li>
+                            <li>
+                                <a href="">食品製造業</a>
+                            </li>
+                            <li>
+                                <a href="">その他</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_header">
+                        <span>種類から探す</span>
+                        <ul class="menu_inner">
+                            <li>
+                                <a href="">垂直多関節ロボット</a>
+                            </li>
+                            <li>
+                                <a href="">水平多関節ロボット</a>
+                            </li>
+                            <li>
+                                <a href="">パラレルリンクロボット</a>
+                            </li>
+                            <li>
+                                <a href="">直交ロボット</a>
+                            </li>
+                            <li>
+                                <a href="">双腕ロボット</a>
+                            </li>
+                            <li>
+                                <a href="">多関節ロボット</a>
+                            </li>
+                            <li>
+                                <a href="">スカラロボット</a>
+                            </li>
+                            <li>
+                                <a href="">直交ロボット</a>
+                            </li>
+                            <li>
+                                <a href="">単軸ロボット</a>
+                            </li>
+                            <li>
+                                <a href="">円筒座標ロボット</a>
+                            </li>
+                            <li>
+                                <a href="">極座標ロボット</a>
+                            </li>
+                            <li>
+                                <a href="">直角座標ロボット</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_header">
+                        <span>作業から探す</span>
+                        <ul class="menu_inner">
+                            <li>
+                                <a href="">シーリング</a>
+                            </li>
+                            <li>
+                                <a href="">マテリアルハンドリング</a>
+                            </li>
+                            <li>
+                                <a href="">塗装</a>
+                            </li>
+                            <li>
+                                <a href="">ピッキング</a>
+                            </li>
+                            <li>
+                                <a href="">溶接</a>
+                            </li>
+                            <li>
+                                <a href="">アーク溶接</a>
+                            </li>
+                            <li>
+                                <a href="">検査</a>
+                            </li>
+                            <li>
+                                <a href="">研磨</a>
+                            </li>
+                            <li>
+                                <a href="">スポット溶接</a>
+                            </li>
+                            <li>
+                                <a href="">パッキング</a>
+                            </li>
+                            <li>
+                                <a href="">バリ取り</a>
+                            </li>
+                            <li>
+                                <a href="">半田付け</a>
+                            </li>
+                            <li>
+                                <a href="">搬送</a>
+                            </li>
+                            <li>
+                                <a href="">機械加工</a>
+                            </li>
+                            <li>
+                                <a href="">組立</a>
+                            </li>
+                            <li>
+                                <a href="">パレタイズ</a>
+                            </li>
+                            <li>
+                                <a href="">ピックアンドプレイス</a>
+                            </li>
+                            <li>
+                                <a href="">ウォータージェット</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_header">
+                        <span>導入工程から探す</span>
+                        <ul class="menu_inner">
+                            <li>
+                                <a href="">引合</a>
+                            </li>
+                            <li>
+                                <a href="">企画構想</a>
+                            </li>
+                            <li>
+                                <a href="">仕様定義</a>
+                            </li>
+                            <li>
+                                <a href="">基本設計</a>
+                            </li>
+                            <li>
+                                <a href="">詳細設計</a>
+                            </li>
+                            <li>
+                                <a href="">製造</a>
+                            </li>
+                            <li>
+                                <a href="">出荷前テスト</a>
+                            </li>
+                            <li>
+                                <a href="">総合テスト</a>
+                            </li>
+                            <li>
+                                <a href="">ユーザーテスト</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_header">
+                        <a href="/for-company">
+                            <span class="no_accordion">導入をご検討の企業様へ</span>
+                        </a>
+                    </li>
+                    <li class="menu_header">
+                        <a href="for-sier">
+                            <span class="no_accordion">SIerの企業様へ</span>
+                        </a>
+                    </li>
+                    <li class="menu_header">
+                            <span>コラム</span>
+                        <ul class="menu_inner">
+                            <li>
+                                <a href=""></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu_header">
+                        <a href="/interview">
+                            <span class="no_accordion">インタビュー</span>
+                        </a>
+                    </li>
+                    <ul class="menu_others">
+                        <li>
+                            <a href="/company">運営会社</a>
+                        </li>
+                        <li>
+                            <a href="/terms">利用規約</a>
+                        </li>
+                        <li>
+                            <a href="">免責事項</a>
+                        </li>
+                        <li>
+                            <a href="/contact">お問い合わせ</a>
+                        </li>
+                    </ul>
+                </ul>
+            </nav>
+        </div> -->
+    </header>
+
+    <div class="main_cc">
+        <h2>ウルポ 「新未来型フェイスシートマスク」</h2>
+    </div>
+
+    <div class="fixed_banner">
+            <div class="banner_inner">
+                <div class="info">
+                    5枚×26ml<br>
+                    <span>5,000</span>円（税抜）
+                </div>
+                <div class="btn">
+                    <a href="">購入はこちら</a>
+                </div>
+            </div>
+    </div>
+
+    <main>
+        <div class="mv">
+            <h2>
+                <img class="pc_mv" src="img/mv_img.png" alt="NIGHT OF 
+                INSPIRATION">
+                <img class="sp_mv" src="img/sp_mv_img.png" alt="NIGHT OF 
+                INSPIRATION">
+            </h2>
+        </div>
+
+        <section class="feature">
+            <div class="feature_inner">
+                <div class="img_area">
+                    <img src="img/feature_img.png" alt="ULUPOの特徴" class="feature_img">
+                </div>
+                <div class="feature_annotation">
+                    旭化成ベンリーゼTM使用（承認番号：F40Z307)<br>
+                    ※自重の13倍もの水分を保持                
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="section_inner">
+                <h2>
+                    <img src="img/about_ttl.svg" alt="ULUPO">
+                </h2>
+                <p class="about_lead">
+                    ハワイ語で<br>
+                    「一夜のインスピレーション」と言う意味を持ち<br>
+                    ハワイのパワースポット、<br>
+                    ウルポ・ヘイアウから一晩で蘇り<br>
+                    力みなぎるお肌へと願いを込めて<br>
+                    商品名をULUPO(ウルポ)といたしました。<br>
+                    女性・男性問わずお使い頂けますよう<br>
+                    有効成分の浸透力を極限まで極めた<br>
+                    フェイスマスクとなっております。                
+                </p>
+            </div>
+        </section>
+
+        <section class="ingredients">
+            <div class="section_inner">
+                <h2 class="sec_ttl">純生国産ヒト幹細胞培養液使用</h2>
+                <h3 class="sub_ttl">
+                    <span>再生医療グレード</span>
+                </h3>
+                <div class="features">
+                    <div class="feature_item">
+                        <h4>貴重な純生国産ヒト幹細胞培養液を配合したフェイスシートマスク</h4>
+                    </div>
+                    <div class="feature_item">
+                        <h4>シート、美容液、箱すべて日本製を使用、徹底管理体制の下で一貫した日本製造</h4>
+                    </div>
+                    <div class="feature_item">
+                        <h4>
+                            安心安全な処方設計（8つのフリー）<br>
+                            <span>パラベン、エタノール、シリコーン、合成着色料、鉱物油、合成香料、紫外線吸収剤、石油系界面活性剤一切使用しておりません。</span>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison">
+            <div class="section_inner">
+                <h2 class="sec_ttl">
+                    ウルポと他社ヒト幹細胞<br class="sp_br">
+                    培養液原料濃度の違い                    
+                </h2>
+                <div class="comparison_diagram_area">
+                    <div class="diagram ulupo_area">
+                        <img class="diagram_pc" src="img/ulupo_diagram.svg" alt="">
+                        <img class="diagram_sp" src="img/sp_ulupo_diagram.png" alt="">
+                    </div>
+                    <div class="diagram others_area">
+                        <img class="diagram_pc" src="img/others_diagram.svg" alt="">
+                        <img class="diagram_sp" src="img/sp_others_diagram.png" alt="">
+                    </div>
+                </div>
+                <p class="description">他社化粧品に配合されているヒト幹細胞培養液は原料の段階で水や添加物を加えているものが多く見られます。</p>
+                <p class="description">ウルポの原料は国内最大規模の細胞加工施設（CPC）で培養した培養上清を水や添加物を加えずに新鮮な生の状態で冷凍し、日本国内で製造した原料を使用しています。</p>
+            </div>
+        </section>
+
+        <section class="cell_activation">
+            <div class="section_inner">
+                <h2>
+                    3 Cell Activation <span>処方</span>
+                </h2>
+                <div class="underline">
+                    <img class="pc" src="img/cell_activation_underline.svg" alt="">
+                    <img class="tb" src="img/sp_cell_activation_underline.svg" alt="">
+                </div>
+                <div class="feature_items">
+                    <div class="feature_item">
+                        <div class="item_num">
+                            <img src="img/feature_item_num1.svg" alt="">
+                        </div>
+                        <div class="item_main_area">
+                            <div class="item_img">
+                                <img src="img/cell_activation_diagram1.png" alt="100%日本製">
+                            </div>
+                            <div class="item_ttl_area">
+                                <h3 class="feature_cc">100%日本製</h3>
+                                <h4 class="item_ttl">純生ヒト幹細胞培養液</h4>
+                            </div>
+                        </div>
+                        <p class="item_lead">
+                            何百種類もの成長因子が含まれ抗酸化作用、創傷治癒効果、シワ改善防止効果に有効とされる因子が含まれています。この培養液を添加剤や熱を一切加えず新鮮な生の状態で配合。                            
+                        </p>
+                    </div>
+                    <div class="feature_item">
+                        <div class="item_num">
+                            <img src="img/feature_item_num2.svg" alt="">
+                        </div>
+                        <div class="item_main_area">
+                            <div class="item_img">
+                                <img src="img/cell_activation_diagram2.png" alt="テロメア理論着目成分">
+                            </div>
+                            <div class="item_ttl_area">
+                                <h3 class="feature_cc">テロメア理論着目成分</h3>
+                                <h4 class="item_ttl">ビタソース</h4>
+                            </div>
+                        </div>
+                        <p class="item_lead">
+                            オウゴン(黄芩)由来成分。細胞の老化防止、若返りに有効な「テロメア理論」着目成分テロメラーゼの活性。傷、肌のターンオーバーなど正常に維持。皮膚線維芽細胞集団の若返りをサポート。
+                        </p>
+                    </div>
+                    <div class="feature_item">
+                        <div class="item_num">
+                            <img src="img/feature_item_num3.svg" alt="">
+                        </div>
+                        <div class="item_main_area">
+                            <div class="item_img">
+                                <img src="img/cell_activation_diagram3.png" alt="オートファジー理論着目成分">
+                            </div>
+                            <div class="item_ttl_area">
+                                <h3 class="feature_cc">オートファジー理論着目成分</h3>
+                                <h4 class="item_ttl">アクアタイド&ネルーラ</h4>
+                            </div>
+                        </div>
+                        <p class="item_lead">
+                            ノーベル賞受賞で注目の「オートファジー理論」着目成分。2つのオートファジー活性成分を高濃度配合。細胞レベルで様々な肌トラブル、肌ストレスを未然に防ぎ、丈夫で透明感のある肌へ導きます。
+                        </p>
+                    </div>
+                </div>
+                <p class="ingredients_lead">
+                    金賞受賞成分と5種コラーゲン、<br>
+                    5種ヒアルロン酸、5種セラミドなど厳選した<br>
+                    最先端成分を惜しみなく配合                    
+                </p>
+                <div class="underline">
+                    <img class="pc" src="img/cell_activation_underline.svg" alt="">
+                    <img class="tb" src="img/sp_cell_activation_underline.svg" alt="">
+                </div>
+                <div class="ingredients_img">
+                    <img src="img/cell_activation_diagram4.svg" alt="金賞受賞成分と5種コラーゲン、5種ヒアルロン酸、5種セラミドなど厳選した最先端成分を惜しみなく配合">
+                    <div class="ingredients_list">
+                        <div class="list_green">
+                            <div class="list_item">5種セラミド</div>
+                            <div class="list_item">5種コラーゲン</div>
+                            <div class="list_item">5種ヒアルロン酸</div>
+                        </div>
+                        <div class="list_orange">
+                            <div class="list_item">ロイヤルビオサイト</div>
+                            <div class="list_item">アディポフィリン</div>
+                            <div class="list_item">プロジェリン</div>
+                            <div class="list_item">アクアタイド</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="ingredients_list">
+                    <div class="ingredients_support">
+                        <div class="ingredients_item">5種セラミド</div>
+                        <div class="ingredients_item">5種コラーゲン</div>
+                        <div class="ingredients_item">5種ヒアルロン酸</div>
+                    </div>
+                    <div class="ingredients_gold_prize">
+                        <div class="ingredients_item">ロイヤルビオサイト</div>
+                        <div class="ingredients_item">アディポフィリン</div>
+                        <div class="ingredients_item">プロジェリン</div>
+                        <div class="ingredients_item">アクアタイド</div>
+                    </div>
+                </div> -->
+                <h3 class="cell_like_ttl">セルライク</h3>
+                <p class="cell_like_lead">
+                    <span>浸透性を高めるブースター機能成分</span>
+                    セカンドスキン効果による皮膚バリアの強化<br>
+                    外的ストレスからの保護や肌の水分保持効果                    
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="section_inner">
+            <p class="footer_lead">
+                掲載の記事・写真・イラストなどのすべてのコンテンツの<br>
+                無断複写・転載等を禁じます
+            </p>
+            <div class="copyright">
+                © 2021 OOOOOOO
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

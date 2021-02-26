@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+//ヘッダー
+header {
+  width: 100%;
+  height: 10.4vh;
+  @include tb {
+    height: 8.1vh;
+  }
+  .header_inner {
+    width: 100%;
+    height: 10.4vh;
+    max-width: 100%;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @include tb {
+      height: 8.1vh;
+    }
+    .header_main {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 0 50px;
+      @include sp {
+        padding: 0 15px;
+        height: 40px;
+      }
+      .h_logo {
+        display: flex;
+        align-items: center;
+        a {
+          display: block;
+          width: 170px;
+          @include sp {
+            width: 100px;
+          }
+          img {
+            width: 100%;
+            max-height: 100%;
+            vertical-align: middle;
+          }
+        }
+        span {
+          display: block;
+          margin-left: 7px;
+          font-size: 12px;
+
+          @include tb {
+            display: none;
+          }
+        }
+      }
+      #gnav {
+        // position: absolute;
+        // right: 20%;
+        height: 100%;
+        nav {
+          height: 100%;
+          #gnav_list {
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .list {
+              font-size: 14px;
+              color: #333333;
+              a {
+                display: block;
+                width: 30px;
+                height: 30px;
+                @include sp {
+                  width: 25px;
+                  height: 25px;
+                }
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+            .search_sier {
+              cursor: pointer;
+            }
+            .list:not(:first-child) {
+              padding-left: 20px;
+              @include sp {
+                padding-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.open header .header_inner #humbgr .bars {
+  span {
+    &:nth-of-type(1) {
+      top: 6.5px !important;
+      transform: rotate(45deg);
+      @include sp {
+        top: 5.5px !important;
+      }
+    }
+    &:nth-of-type(2) {
+      transform: rotate(-45deg);
+    }
+    &:nth-of-type(3) {
+      display: none;
+    }
+  }
+}
+
+//ヘッダーアニメーションの記述//
+header .header_inner {
+  transition: 0.5s;
+}
+header .header_inner.hide {
+  transform: translateY(-100%);
+}
+// body.open {
+//   .header {
+//     .header_inner {
+//       border-bottom: 1px solid #bcb5ab;
+//     }
+//   }
+// }
+body.open header .header_inner.hide {
+  transform: none;
+}
+
+header .header_inner {
+  transition: 0.5s;
+}
+header .header_inner .header_contents.hide {
+  transform: translateY(-100%);
+  transition: 0.5s;
+}
+// body.open {
+//   .header {
+//     .header_inner {
+//       border-bottom: 1px solid #bcb5ab;
+//     }
+//   }
+// }
+body.open header .header_inner .header_contents.hide {
+  transform: none;
+}
+
+body.open .header #gnav_menu {
+  // position: fixed;
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+  // height: 100vh;
+  background-color: #fafafa;
+  z-index: 100;
+  nav {
+    height: 100%;
+    .gnav_menu_list {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      width: 80%;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include sp {
+        width: 89.33%;
+        top: 70px;
+      }
+      .menu_header {
+        width: 100%;
+        border-bottom: 1px solid #e2e2e2;
+        span {
+          position: relative;
+          display: block;
+          padding: 15px 0;
+          width: 100%;
+          font-size: 20px;
+          @include sp {
+            font-size: 14px;
+          }
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-image: url(../img/accordion_close.svg);
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 10px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        // span:not(:last-child) {
+        //   border-bottom: 1px solid #e2e2e2;
+        // }
+        span.open {
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-image: url(../img/accordion_open.svg);
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 10px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        .no_accordion {
+          &:after {
+            display: none;
+          }
+        }
+      }
+      .menu_inner {
+        display: none;
+        margin-top: 10px;
+        li {
+          a {
+            display: block;
+            position: relative;
+            padding: 5px 0 5px 15px;
+            font-size: 14px;
+            &:before {
+              content: "";
+              display: block;
+              position: absolute;
+              background-image: url(../img/arrow_blue.svg);
+              background-repeat: no-repeat;
+              width: 10px;
+              height: 10px;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+      .menu_others {
+        display: flex;
+        margin-top: 20px;
+        li {
+          margin: 0 10px;
+          a {
+            font-size: 18px;
+            @include sp {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.open {
+  .mv {
+    display: none !important;
+  }
+  .page_head_bg {
+    display: none;
+  }
+  main {
+    display: none !important;
+  }
+  footer {
+    display: none !important;
+  }
+}
