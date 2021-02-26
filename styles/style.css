@@ -706,7 +706,7 @@ footer .section_inner .copyright {
 
 @media screen and (max-width: 425px) {
   .fixed_banner .banner_inner .btn a {
-    padding: 15px 45px 15px 15px;
+    padding: 10px 45px 10px 15px;
   }
 }
 
@@ -788,7 +788,7 @@ main .feature {
 
 @media screen and (max-width: 768px) {
   main .feature {
-    margin-top: -5px;
+    margin-top: 0;
     padding: 30px 0 35px 0;
   }
 }
