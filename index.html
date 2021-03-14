@@ -1,288 +1,56 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja"  prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Document</title>
+    <meta property="og:url" content="https://snow1874.github.io/ulupo-test/" />
+    <meta property="og:type" content=" ページの種類" />
+    <meta property="og:title" content="ULUPO" />
+    <meta property="og:description" content=" ページのディスクリプション" />
+    <meta property="og:site_name" content="ULUPO" />
+    <meta property="og:image" content="img/ogp_image.jpg" /> 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="fb:app_id" content="[app_id]" />   
+    <title>ウルポ 「新未来型フェイスシートマスク」</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="header_inner">
             <div class="header_main">
                 <h1 class="h_logo">
-                    <a href="/"><img src="img/h_logo.svg" alt=""></a>
+                    <a href="/"><img src="img/h_logo.svg" alt="ULUPO"></a>
                 </h1>
-                <!-- <a id="humbgr">
-                    <div class="bars">
-                        <span></span>
-                        <span></span>
-                        <span></span>    
-                    </div>
-                </a> -->
                 <div id="gnav">
                     <nav>
                         <ul id="gnav_list">
                             <li class="list">
-                                <a href="">
+                                <a target="_blank" href="https://www.facebook.com/UlupoOfficial/">
                                     <img src="img/icon_facebook.svg" alt="">
                                 </a>
                             </li>
                             <li class="list">
-                                <a href="">
+                                <a target="_blank" href="https://www.instagram.com/ulupo_official/">
                                     <img src="img/icon_instagram.svg" alt="">
                                 </a>
                             </li>
                             <li class="list">
-                                <a href="">
+                                <a target="_blank" href="https://twitter.com/OfficialUlupo">
                                     <img src="img/icon_twitter.svg" alt="">
                                 </a>
                             </li>
                             <li class="list">
-                                <a href="">
+                                <a target="_blank" href="">
                                     <img src="img/icon_line.svg" alt="">
                                 </a>
                             </li>
-                            <!-- <li class="list search_sier">
-                                <span class="category_name">SIerを探す</span>
-                                <ul class="sub_category">
-                                    <li><a href="/#search_from_industory">業界から探す</a></li>
-                                    <li><a href="/#search_from_lobot">種類から探す</a></li>
-                                    <li><a href="/#search_from_work">作業から探す</a></li>
-                                    <li><a href="/#search_from_process">導入工程から探す</a></li>
-                                </ul>
-                            </li>
-                            <li class="list"><a class="category" href="/for-company"><span class="category_name">導入をご検討の企業様へ</span></a></li>
-                            <li class="list"><a class="category" href="/for-sier"><span class="category_name">SIerの企業様へ</span></a></li>
-                            <li class="list"><a class="category" href="/interview"><span class="category_name">インタビュー</span></a></li>
-                            <li class="list"><a class="category" href="/column"><span class="category_name">コラム</span></a></li> -->
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
-        <!-- <div id="gnav_menu">
-            <nav>
-                <ul class="gnav_menu_list">
-                    <li class="menu_header">
-                        <span>SIerを探す</span>
-                        <ul class="menu_inner">
-                            <li>
-                                <a href="">金属製品</a>
-                            </li>
-                            <li>
-                                <a href="">輸送用機械器具</a>
-                            </li>
-                            <li>
-                                <a href="">プラスチック製品</a>
-                            </li>
-                            <li>
-                                <a href="">生産用機械器具</a>
-                            </li>
-                            <li>
-                                <a href="">業務用機械器具</a>
-                            </li>
-                            <li>
-                                <a href="">はん用機械器具</a>
-                            </li>
-                            <li>
-                                <a href="">非鉄金属</a>
-                            </li>
-                            <li>
-                                <a href="">住宅産業</a>
-                            </li>
-                            <li>
-                                <a href="">電子部品・デバイス</a>
-                            </li>
-                            <li>
-                                <a href="">情報通信機械器具</a>
-                            </li>
-                            <li>
-                                <a href="">電気機械器具</a>
-                            </li>
-                            <li>
-                                <a href="">食品製造業</a>
-                            </li>
-                            <li>
-                                <a href="">その他</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu_header">
-                        <span>種類から探す</span>
-                        <ul class="menu_inner">
-                            <li>
-                                <a href="">垂直多関節ロボット</a>
-                            </li>
-                            <li>
-                                <a href="">水平多関節ロボット</a>
-                            </li>
-                            <li>
-                                <a href="">パラレルリンクロボット</a>
-                            </li>
-                            <li>
-                                <a href="">直交ロボット</a>
-                            </li>
-                            <li>
-                                <a href="">双腕ロボット</a>
-                            </li>
-                            <li>
-                                <a href="">多関節ロボット</a>
-                            </li>
-                            <li>
-                                <a href="">スカラロボット</a>
-                            </li>
-                            <li>
-                                <a href="">直交ロボット</a>
-                            </li>
-                            <li>
-                                <a href="">単軸ロボット</a>
-                            </li>
-                            <li>
-                                <a href="">円筒座標ロボット</a>
-                            </li>
-                            <li>
-                                <a href="">極座標ロボット</a>
-                            </li>
-                            <li>
-                                <a href="">直角座標ロボット</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu_header">
-                        <span>作業から探す</span>
-                        <ul class="menu_inner">
-                            <li>
-                                <a href="">シーリング</a>
-                            </li>
-                            <li>
-                                <a href="">マテリアルハンドリング</a>
-                            </li>
-                            <li>
-                                <a href="">塗装</a>
-                            </li>
-                            <li>
-                                <a href="">ピッキング</a>
-                            </li>
-                            <li>
-                                <a href="">溶接</a>
-                            </li>
-                            <li>
-                                <a href="">アーク溶接</a>
-                            </li>
-                            <li>
-                                <a href="">検査</a>
-                            </li>
-                            <li>
-                                <a href="">研磨</a>
-                            </li>
-                            <li>
-                                <a href="">スポット溶接</a>
-                            </li>
-                            <li>
-                                <a href="">パッキング</a>
-                            </li>
-                            <li>
-                                <a href="">バリ取り</a>
-                            </li>
-                            <li>
-                                <a href="">半田付け</a>
-                            </li>
-                            <li>
-                                <a href="">搬送</a>
-                            </li>
-                            <li>
-                                <a href="">機械加工</a>
-                            </li>
-                            <li>
-                                <a href="">組立</a>
-                            </li>
-                            <li>
-                                <a href="">パレタイズ</a>
-                            </li>
-                            <li>
-                                <a href="">ピックアンドプレイス</a>
-                            </li>
-                            <li>
-                                <a href="">ウォータージェット</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu_header">
-                        <span>導入工程から探す</span>
-                        <ul class="menu_inner">
-                            <li>
-                                <a href="">引合</a>
-                            </li>
-                            <li>
-                                <a href="">企画構想</a>
-                            </li>
-                            <li>
-                                <a href="">仕様定義</a>
-                            </li>
-                            <li>
-                                <a href="">基本設計</a>
-                            </li>
-                            <li>
-                                <a href="">詳細設計</a>
-                            </li>
-                            <li>
-                                <a href="">製造</a>
-                            </li>
-                            <li>
-                                <a href="">出荷前テスト</a>
-                            </li>
-                            <li>
-                                <a href="">総合テスト</a>
-                            </li>
-                            <li>
-                                <a href="">ユーザーテスト</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu_header">
-                        <a href="/for-company">
-                            <span class="no_accordion">導入をご検討の企業様へ</span>
-                        </a>
-                    </li>
-                    <li class="menu_header">
-                        <a href="for-sier">
-                            <span class="no_accordion">SIerの企業様へ</span>
-                        </a>
-                    </li>
-                    <li class="menu_header">
-                            <span>コラム</span>
-                        <ul class="menu_inner">
-                            <li>
-                                <a href=""></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu_header">
-                        <a href="/interview">
-                            <span class="no_accordion">インタビュー</span>
-                        </a>
-                    </li>
-                    <ul class="menu_others">
-                        <li>
-                            <a href="/company">運営会社</a>
-                        </li>
-                        <li>
-                            <a href="/terms">利用規約</a>
-                        </li>
-                        <li>
-                            <a href="">免責事項</a>
-                        </li>
-                        <li>
-                            <a href="/contact">お問い合わせ</a>
-                        </li>
-                    </ul>
-                </ul>
-            </nav>
-        </div> -->
     </header>
 
     <div class="main_cc">
@@ -293,10 +61,10 @@
             <div class="banner_inner">
                 <div class="info">
                     5枚×26ml<br>
-                    <span>5,000</span>円（税抜）
+                    <span>5,500</span>円（税込）
                 </div>
                 <div class="btn">
-                    <a href="">購入はこちら</a>
+                    <a target="_blank" href="https://esthy.shop/ulupo/">購入はこちら</a>
                 </div>
             </div>
     </div>
@@ -473,19 +241,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="ingredients_list">
-                    <div class="ingredients_support">
-                        <div class="ingredients_item">5種セラミド</div>
-                        <div class="ingredients_item">5種コラーゲン</div>
-                        <div class="ingredients_item">5種ヒアルロン酸</div>
-                    </div>
-                    <div class="ingredients_gold_prize">
-                        <div class="ingredients_item">ロイヤルビオサイト</div>
-                        <div class="ingredients_item">アディポフィリン</div>
-                        <div class="ingredients_item">プロジェリン</div>
-                        <div class="ingredients_item">アクアタイド</div>
-                    </div>
-                </div> -->
                 <h3 class="cell_like_ttl">セルライク</h3>
                 <p class="cell_like_lead">
                     <span>浸透性を高めるブースター機能成分</span>
@@ -504,7 +259,7 @@
                 無断複写・転載等を禁じます
             </p>
             <div class="copyright">
-                © 2021 OOOOOOO
+                © Ellerose co., ltd. All Rights Reserved.
             </div>
         </div>
     </footer>
